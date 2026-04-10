@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "VeritasAI",
+    "slug": "veritasai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "veritasai",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f0c29"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.verifiers.veritasai",
+      "infoPlist": {
+        "NSCameraUsageDescription": "VeritasAI needs camera access for live deepfake detection and media capture.",
+        "NSMicrophoneUsageDescription": "VeritasAI needs microphone access for audio deepfake analysis.",
+        "NSPhotoLibraryUsageDescription": "VeritasAI needs photo library access to analyze images for deepfakes."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f0c29"
+      },
+      "package": "com.verifiers.veritasai",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow VeritasAI to access your camera for live deepfake detection."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow VeritasAI to access your photos for deepfake analysis."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

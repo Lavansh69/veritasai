@@ -1,0 +1,66 @@
+# VeritasAI Training Configuration
+
+dataset:
+  # Root folder containing 'real/' and 'fake/' subdirectories
+  root_dir: "./data"
+  # Supported: faceforensics, dfdc, celebdf, custom
+  format: "custom"
+  # train/val/test split ratios
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+preprocessing:
+  image_size: 224
+  # Face detection before cropping
+  detect_faces: true
+  # Alignment
+  align_faces: true
+  # ImageNet normalization
+  normalize: true
+
+# V2 preprocessing (for ViT, FrequencyFusion, and advanced models)
+preprocessing_v2:
+  image_size: 384
+  detect_faces: true
+  align_faces: true
+  normalize: true
+  # Use albumentations-based advanced augmentations
+  advanced_augment: true
+
+model:
+  # efficientnet | xceptionnet
+  architecture: "efficientnet"
+  # pretrained ImageNet weights for transfer learning
+  pretrained: true
+
+training:
+  batch_size: 32
+  epochs: 30
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  optimizer: "adam"
+  loss: "binary_cross_entropy"
+  # Save checkpoint every N epochs
+  checkpoint_interval: 5
+  # Early stopping patience
+  early_stopping: 7
+
+output:
+  # Directory for saved models + plots
+  output_dir: "./output"
+  save_best: true
+  save_plots: true
+
+# V3 retraining settings (used by train_v3.py)
+retraining:
+  # Lower LR for fine-tuning (prevents catastrophic forgetting)
+  finetune_lr: 0.00005
+  # Number of parameters to unfreeze from the tail end
+  unfreeze_last_n: 30
+  # Gradient accumulation steps (increase to 4 or 8 if GPU OOM)
+  grad_accumulation: 1
+  # Early stopping patience
+  patience: 7
+  # Enable mixed-precision training (recommended for GPU)
+  use_amp: true

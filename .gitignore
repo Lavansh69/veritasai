@@ -1,0 +1,97 @@
+# ═══════════════════════════════════════════
+# Python
+# ═══════════════════════════════════════════
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyc
+*.pyd
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# ═══════════════════════════════════════════
+# ML Models (too large for GitHub — 70 MB+ each)
+# Upload to Google Drive / HuggingFace Hub instead
+# ═══════════════════════════════════════════
+backend/models/*.pth
+backend/models/*.pt
+backend/models/*.ckpt
+training_pipeline/models/*.pth
+training_pipeline/models/*.pt
+
+# ═══════════════════════════════════════════
+# Training Data (100s of MBs)
+# ═══════════════════════════════════════════
+training_pipeline/data/
+training_pipeline/output/
+training_pipeline/audio_output/
+
+# ═══════════════════════════════════════════
+# Backend Temp Files
+# ═══════════════════════════════════════════
+backend/temp_uploads/
+backend/temp_heatmaps/
+backend/temp_reports/
+backend/feedback_data/
+
+# ═══════════════════════════════════════════
+# Node.js / Next.js
+# ═══════════════════════════════════════════
+node_modules/
+.next/
+out/
+frontend/.next/
+frontend/node_modules/
+frontend/out/
+*.tsbuildinfo
+.npm
+
+# ═══════════════════════════════════════════
+# Environment Variables (NEVER commit these)
+# ═══════════════════════════════════════════
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# ═══════════════════════════════════════════
+# Misc / OS Files
+# ═══════════════════════════════════════════
+.DS_Store
+Thumbs.db
+desktop.ini
+*.zip
+*.log
+.idea/
+.vscode/settings.json
+
+# ═══════════════════════════════════════════
+# Test / Scratch Scripts (optional — remove
+# these lines if you want to keep them)
+# ═══════════════════════════════════════════
+diagnose*.py
+simulate_model.py
+compare_models.py
+quick_test.py
+full_analyze.py
+test_clip.py
+test_hf.py
+test_logits.py
+test_predict*.py
+test_v*.py
+download_diverse_fakes.py
+training_pipeline.zip
+accuracy_report.json

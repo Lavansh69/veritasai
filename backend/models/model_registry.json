@@ -1,0 +1,88 @@
+{
+  "models": [
+    {
+      "version": 1,
+      "filename": "veritas_model.pth",
+      "path": "C:\\Users\\Lavansh\\.gemini\\antigravity\\scratch\\veritasai\\backend\\models\\veritas_model.pth",
+      "created_at": "2026-03-17T03:56:10.389837",
+      "metrics": {
+        "note": "Original Kaggle-trained model"
+      },
+      "active": false
+    },
+    {
+      "version": 2,
+      "filename": "veritas_model_v2.pth",
+      "path": "C:\\Users\\Lavansh\\.gemini\\antigravity\\scratch\\veritasai\\backend\\models\\veritas_model_v2.pth",
+      "created_at": "2026-03-19T02:19:00.000000",
+      "metrics": {
+        "accuracy": 0.998,
+        "precision": 0.9993,
+        "recall": 0.9967,
+        "f1": 0.998,
+        "auc": 1.0,
+        "dataset": "deepfake-vs-real-60k",
+        "training_time_minutes": 130.5
+      },
+      "active": false
+    },
+    {
+      "version": 3,
+      "filename": "veritas_model_v3.pth",
+      "path": "C:\\Users\\Lavansh\\.gemini\\antigravity\\scratch\\veritasai\\backend\\models\\veritas_model_v3.pth",
+      "created_at": "2026-04-10T19:07:37.491677",
+      "metrics": {
+        "accuracy": 0.9879,
+        "f1": 0.9867,
+        "auc": 0.9999,
+        "note": "Fine-tuned on 596 real + 494 fake images"
+      },
+      "active": false
+    },
+    {
+      "version": 4,
+      "filename": "veritas_model_v4.pth",
+      "path": "C:\\Users\\Lavansh\\.gemini\\antigravity\\scratch\\veritasai\\backend\\models\\veritas_model_v4.pth",
+      "created_at": "2026-04-10T19:39:18.266182",
+      "metrics": {
+        "accuracy": 0.9817,
+        "f1": 0.9801,
+        "auc": 1.0,
+        "note": "Fresh ImageNet training on 1090 WhatsApp images"
+      },
+      "active": false
+    },
+    {
+      "version": 5,
+      "filename": "veritas_model_v5.pth",
+      "path": "C:\\Users\\Lavansh\\.gemini\\antigravity\\scratch\\veritasai\\backend\\models\\veritas_model_v5.pth",
+      "created_at": "2026-04-10T21:41:18.928024",
+      "metrics": {
+        "accuracy": 0.9541,
+        "f1": 0.9581,
+        "auc": 0.9962,
+        "note": "v5: diverse StyleGAN+WhatsApp fakes, 1301 images"
+      },
+      "active": false
+    },
+    {
+      "version": 6,
+      "filename": "veritas_model_v7.pth",
+      "path": "C:\\Users\\Lavansh\\.gemini\\antigravity\\scratch\\veritasai\\backend\\models\\veritas_model_v7.pth",
+      "created_at": "2026-04-11T03:04:53.982741",
+      "metrics": {
+        "test_accuracy": 0.9383,
+        "test_f1": 0.9442,
+        "test_auc": 0.9825,
+        "test_precision": 0.9302,
+        "test_recall": 0.9586,
+        "val_auc": 0.9898,
+        "training_images": 6801,
+        "epochs": 25,
+        "source": "fine-tuned from v6 on 6801 images (HuggingFace+TPDNE+RandomUser+WhatsApp)"
+      },
+      "active": true
+    }
+  ],
+  "active_version": 6
+}
