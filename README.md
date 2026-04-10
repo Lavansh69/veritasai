@@ -15,6 +15,49 @@
 
 ---
 
+## ⚡ For Judges / Evaluators — Run in 5 Minutes
+
+> **Prerequisites:** Python 3.10+, Node.js 18+, Git
+
+### Step 1 — Clone the repo
+```bash
+git clone https://github.com/Lavansh69/veritasai.git
+cd veritasai
+```
+
+### Step 2 — Download the AI Model (69 MB)
+1. Go to → [Releases Page](https://github.com/Lavansh69/veritasai/releases/tag/v1.0)
+2. Download **`veritas_model_v7.pth`**
+3. Place it inside → `backend/models/veritas_model_v7.pth`
+
+### Step 3 — Start the Backend
+```bash
+cd backend
+pip install -r requirements.txt
+python -m uvicorn main:app --host 0.0.0.0 --port 8000
+```
+✅ Backend running at → `http://localhost:8000`
+✅ API docs → `http://localhost:8000/docs`
+
+### Step 4 — Start the Frontend (new terminal)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+✅ App running at → `http://localhost:3000`
+
+### Step 5 — Test It
+1. Open `http://localhost:3000`
+2. Click **Upload** → drop any image or video
+3. Click **Analyze Media**
+4. See the AI verdict, Grad-CAM heatmap, and scorecard
+5. Click **Download PDF Report**
+
+> 🎵 **Audio detection:** Go to the Upload page → scroll down → upload any `.mp3` or `.wav` file
+
+---
+
 ## 🎯 What is VeritasAI?
 
 VeritasAI is a production-grade deepfake detection platform that analyses images, videos, and audio for AI-generated manipulation. Upload any suspicious media and get a detailed forensic report in seconds — including Grad-CAM heatmaps showing exactly where the AI spotted manipulation.
