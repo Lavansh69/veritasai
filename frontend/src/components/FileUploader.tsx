@@ -61,7 +61,7 @@ export default function FileUploader({ onFilesSelected, isLoading }: FileUploade
           className={`glass-card p-8 text-center cursor-pointer transition-all duration-300 border-2 border-dashed ${
             mediaDz.isDragActive ? 'border-brand-400 bg-brand-500/10' : 'border-white/10'
           }`}
-          {...mediaDz.getRootProps()}
+          {...(({ onAnimationStart, ...rest }) => rest)(mediaDz.getRootProps())}
         >
           <input {...mediaDz.getInputProps()} id="media-upload" />
           <AnimatePresence mode="wait">
@@ -113,7 +113,7 @@ export default function FileUploader({ onFilesSelected, isLoading }: FileUploade
           className={`glass-card p-6 text-center cursor-pointer transition-all duration-300 border-2 border-dashed ${
             refDz.isDragActive ? 'border-purple-400 bg-purple-500/10' : 'border-white/10'
           }`}
-          {...refDz.getRootProps()}
+          {...(({ onAnimationStart, ...rest }) => rest)(refDz.getRootProps())}
         >
           <input {...refDz.getInputProps()} id="reference-upload" />
           {refFile ? (
