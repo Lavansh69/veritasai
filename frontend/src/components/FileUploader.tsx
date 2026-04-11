@@ -56,12 +56,11 @@ export default function FileUploader({ onFilesSelected, isLoading }: FileUploade
         <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-secondary)' }}>
           Suspicious Media <span className="text-red-400">*</span>
         </label>
-        <motion.div
-          whileHover={{ scale: 1.01 }}
-          className={`glass-card p-8 text-center cursor-pointer transition-all duration-300 border-2 border-dashed ${
+        <div
+          className={`glass-card p-8 text-center cursor-pointer transition-all duration-300 hover:scale-[1.01] border-2 border-dashed ${
             mediaDz.isDragActive ? 'border-brand-400 bg-brand-500/10' : 'border-white/10'
           }`}
-          {...(mediaDz.getRootProps() as any)}
+          {...mediaDz.getRootProps()}
         >
           <input {...mediaDz.getInputProps()} id="media-upload" />
           <AnimatePresence mode="wait">
@@ -100,7 +99,7 @@ export default function FileUploader({ onFilesSelected, isLoading }: FileUploade
               </motion.div>
             )}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </div>
 
       {/* Reference image upload */}
@@ -108,12 +107,11 @@ export default function FileUploader({ onFilesSelected, isLoading }: FileUploade
         <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-secondary)' }}>
           Reference Image <span className="text-xs opacity-60">(optional)</span>
         </label>
-        <motion.div
-          whileHover={{ scale: 1.01 }}
-          className={`glass-card p-6 text-center cursor-pointer transition-all duration-300 border-2 border-dashed ${
+        <div
+          className={`glass-card p-6 text-center cursor-pointer transition-all duration-300 hover:scale-[1.01] border-2 border-dashed ${
             refDz.isDragActive ? 'border-purple-400 bg-purple-500/10' : 'border-white/10'
           }`}
-          {...(refDz.getRootProps() as any)}
+          {...refDz.getRootProps()}
         >
           <input {...refDz.getInputProps()} id="reference-upload" />
           {refFile ? (
@@ -133,7 +131,7 @@ export default function FileUploader({ onFilesSelected, isLoading }: FileUploade
               <span>Upload a reference photo of the real person for identity comparison</span>
             </div>
           )}
-        </motion.div>
+        </div>
       </div>
 
       {/* Analyze button */}
