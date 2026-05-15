@@ -60,7 +60,7 @@ npm run dev
 
 ## 🎯 What is VeritasAI?
 
-VeritasAI is a production-grade deepfake detection platform that analyses images, videos, and audio for AI-generated manipulation. Upload any suspicious media and get a detailed forensic report in seconds — including Grad-CAM heatmaps showing exactly where the AI spotted manipulation.
+VeritasAI is a production-grade deepfake detection platform that analyses images, videos, and audio for AI-generated manipulation. Upload any suspicious media and get a detailed forensic report in the seconds — including Grad-CAM heatmaps showing exactly where the AI spotted manipulation.
 
 **Built to detect deepfakes shared on WhatsApp, Instagram, and Telegram.**
 
