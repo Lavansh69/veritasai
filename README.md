@@ -3,7 +3,7 @@
 # 🛡️ VeritasAI
 ### AI-Powered Deepfake Detection & Forensic Analysis Platform
 
-*Built for the Hackathon by **The Verifiers***
+*Built for the Hackathon by **The Verifiers**
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
