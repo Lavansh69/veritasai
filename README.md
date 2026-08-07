@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🛡️ VeritasAI
-### AI-Powered Deepfake Detection & Forensic Analysis Platform
+## AI-Powered Deepfake Detection & Forensic Analysis Platform
 
 *Built for the Hackathon by **The Verifiers**
 
