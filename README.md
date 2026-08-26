@@ -10,7 +10,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-EfficientNet--B4-orange?style=flat-square&logo=pytorch)
 ![Accuracy](https://img.shields.io/badge/Accuracy-96.38%25-brightgreen?style=flat-square)
 ![AUC](https://img.shields.io/badge/AUC-99.66%25-brightgreen?style=flat-square)
-
+![License](https://img.shields.io/badge/License-MIT-green)
 </div>
 
 ---
@@ -248,7 +248,3 @@ veritasai/
 - Stock photos (system) — real face baseline
 
 ---
-
-## 📄 License
-
-MIT — Free to use, modify, and distribute.
